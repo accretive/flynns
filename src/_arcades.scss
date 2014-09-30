@@ -223,6 +223,15 @@
   }
 }
 
+@mixin status_flag($color) {
+  @if ( lightness($color) > 30% ) {
+    border-color: transparent darken($color, 15%) transparent transparent;
+  }
+  @else { 
+    border-color: transparent lighten($color, 30%) transparent transparent;
+  }
+}
+
 
 // Only include the arcade that they're using.
 @if $flynns-arcade == asteroids {

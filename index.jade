@@ -5,7 +5,7 @@ section.flynns(ng-controller="the-grid")
   ul.the-grid
 
     //- A generic arcade.  Just add style.
-    li.arcade(ng-repeat="program in programs" ng-controller="eachThumb"
+    li.arcade.arcade--defender(ng-repeat="program in programs" ng-controller="eachThumb"
       ng-class="{'arcade--open': isopen}")
 
       include _arcade_cabinet
