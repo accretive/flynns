@@ -13,7 +13,7 @@ angular.module 'flynns', []
   kimono.getData().success (data) ->
     $scope.programs = data.results.collection1
 
-  $scope.option = $('.grid--admin').css('content')
+  $scope.option = $('.grid--admin').css('content').replace(/\"/g,'')
 
 .controller 'eachThumb', ($scope, $rootScope, $timeout) ->
   $scope.isopen = false
