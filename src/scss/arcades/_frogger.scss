@@ -43,6 +43,11 @@
       bottom: -$spacing-bottom-larger;
     }
 
+    @include webkit-only() {
+      -webkit-box-pack: end;
+      -webkit-box-direction: normal;
+    }
+
     .specialshow & {
       margin-top: -$flynns-special-spacing;
       margin-bottom: -$flynns-special-spacing;
@@ -97,6 +102,10 @@
   }
 
   .arcade__line--alpha {
+    @include webkit-only() {
+      -webkit-box-ordinal-group: 2;
+    }
+
     .arcade__details {
       display: none;
     }
@@ -104,6 +113,10 @@
 
   .arcade__line--beta {
     @include align-items(flex-end);
+
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+    }
 
     .high-def, .phone {
       display: none;
@@ -126,6 +139,10 @@
 
   .arcade__line--gamma {
     @include order(-1);
+
+    @include webkit-only() {
+      -webkit-box-ordinal-group: 3;
+    }
   }
 
   .arcade__line--delta {

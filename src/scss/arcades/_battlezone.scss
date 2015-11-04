@@ -21,6 +21,10 @@
       rgba(0, 0, 0, 0.00) 100%
     );
     background-color: transparent;
+
+    @include webkit-only() {
+      -webkit-box-pack: end;
+    }
   }
 
 
@@ -42,10 +46,22 @@
     }
   }
 
+  .arcade__line--alpha {
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+      -webkit-box-pack: justify;
+    } 
+  }
+
   .arcade__line--beta {
     line-height: 16px;
     @include justify-content(space-between);
     @include align-items(flex-end);
+
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+      -webkit-box-pack: justify;
+    }
 
     .arcade__details {
       display: none;

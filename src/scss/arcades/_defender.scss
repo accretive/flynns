@@ -72,6 +72,11 @@
     top: 100%;
     background: white;
 
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+      -webkit-box-pack: justify;
+    }
+
     @if $flynns-show-dropshadow {
       box-shadow: $flynns-arcade-dropshadow;
     }
@@ -92,6 +97,9 @@
     @include justify-content(flex-start);
     @include align-items(flex-start);
 
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+    }
 
     .arcade__details {
       display: none;

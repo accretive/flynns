@@ -38,6 +38,10 @@
     bottom: -$spacing-bottom;
     height: auto;
 
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+    }
+
     @include larger-grids {
       bottom: -$spacing-bottom-larger;
     }
@@ -49,6 +53,11 @@
 
   .arcade__favorite {
     @include order(1);
+
+    @include webkit-only() {
+      -webkit-box-ordinal-group: 2;
+    }
+
     padding-left: $flynns-basic-spacing;
   }
 
@@ -87,6 +96,14 @@
     display: none;
   }
 
+  .arcade__line--alpha {
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+      -webkit-box-pack: justify;
+      -webkit-box-ordinal-group: 2;
+    }
+  }
+
   .arcade__line--alpha,
   .arcade__line--gamma {
     padding-left: 0;
@@ -123,6 +140,9 @@
 
   .arcade__line--gamma {
     @include order(-1);
+    @include webkit-only() {
+      -webkit-box-ordinal-group: 3;
+    }
   }
 
   .arcade__line--delta {
