@@ -321,6 +321,7 @@
   // flex is doing if they're together.
   .arcade__name {
     @include flex(auto);
+    @include prefixer(box-flex, 1, webkit moz spec);
   }
 
   .arcade__details {

@@ -13,6 +13,13 @@
     }
   }
 
+  .arcade__decals {
+    @include webkit-only() {
+      -webkit-box-pack: end;
+      -webkit-box-direction: normal;
+    }
+  }
+
   .arcade__rating {
     display: none;
   }
@@ -34,6 +41,11 @@
     position: absolute;
     bottom: 100%;
     background: white;
+
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+      -webkit-box-pack: justify;
+    }
 
     .specialshow & {
       width: auto;

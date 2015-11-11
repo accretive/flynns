@@ -22,6 +22,11 @@
 
   .arcade__decals {
     border-bottom: 0;
+
+    @include webkit-only() {
+      -webkit-box-pack: end;
+      -webkit-box-direction: reverse;
+    }
   }
 
   .arcade__name {
@@ -63,6 +68,10 @@
     height: 0;
     color: white;
 
+    @include webkit-only() {
+      display: none;
+    }
+
     .arcade:hover & {
       height: $flynns-gamma-height;
 
@@ -75,6 +84,11 @@
 
   .arcade__line--alpha {
     background: rgba(black, 0.5);
+
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+      -webkit-box-pack: justify;
+    }
 
     .high-def, .phone {
       display: none;
@@ -96,6 +110,10 @@
     position: absolute;
     top: 100%;
     width: 100%;
+
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+    }
 
     &, .arcade__status, .arcade__details {
       height: $delta-height;
@@ -182,6 +200,10 @@
   .arcade__line--beta {
     @include flex-direction(column);
     @include align-items(flex-start);
+
+    @include webkit-only() {
+      -webkit-box-direction: normal;
+    }
 
     .arcade__details,
     .arcade__status {
