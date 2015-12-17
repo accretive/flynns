@@ -439,13 +439,40 @@
 //   }
 // }
 
-@import "arcades/asteroids";
-@import "arcades/battlezone";
-@import "arcades/centipede";
-@import "arcades/defender";
-@import "arcades/excitebike";
-@import "arcades/frogger";
 @import "arcades/generic";
+
+@if ($includeAllArcades == true) {
+  @import "arcades/asteroids";
+  @import "arcades/battlezone";
+  @import "arcades/centipede";
+  @import "arcades/defender";
+  @import "arcades/excitebike";
+  @import "arcades/frogger";
+}
+@else {
+  @if ($flynns-arcade == arcade--asteroids) {
+    @import "arcades/asteroids";
+  } 
+  @else if ($flynns-arcade == arcade--battlezone) {
+    @import "arcades/battlezone";
+  } 
+  @else if ($flynns-arcade == arcade--centipede) {
+    @import "arcades/centipede";
+  } 
+  @else if ($flynns-arcade == arcade--defender) {
+    @import "arcades/defender";
+  } 
+  @else if ($flynns-arcade == arcade--excitebike) {
+    @import "arcades/excitebike";
+  } 
+  @else if ($flynns-arcade == arcade--frogger) {
+    @import "arcades/frogger";
+  } 
+  @else {
+    @import "arcades/asteroids";
+  }
+}
+
 @import "out-of-order";
 
 // @import "player";

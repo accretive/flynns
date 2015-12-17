@@ -54,6 +54,9 @@ $flynns-special-spacing: 3px;
 // * excitebike
 // * frogger
 $flynns-arcade: asteroids !default;
+$includeAllStyles: true !default;
+//If includeAllArcades is false, only include the arcade specified by $flynns-arcade.  Defaults to asteroids
+$includeAllArcades: $includeAllStyles !default;
 
 // What font for the names
 $flynns-font-family: $helvetica !default;
