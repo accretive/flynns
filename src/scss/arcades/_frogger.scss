@@ -112,7 +112,7 @@
   }
 
   .arcade__line--beta {
-    @include align-items(flex-end);
+    @include align-items(stretch);
 
     @include webkit-only() {
       -webkit-box-direction: normal;
